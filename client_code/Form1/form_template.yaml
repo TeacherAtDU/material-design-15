@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', role: primary-color}
 components:
 - type: ColumnPanel
   properties: {}
@@ -11,24 +11,40 @@ components:
   - name: card_1
     properties: {role: card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'JPJXLE,JMHCFK'}
+    layout_properties: {grid_position: 'XXGIOO,SWIMFV'}
     components:
     - name: label_1
       properties: {text: Feedback Form, role: headline}
       type: Label
       layout_properties: {grid_position: 'WJEYVL,GITVRR'}
     - name: label_2
-      properties: {text: 'Name:'}
+      properties: {text: 'Name:', align: left}
       type: Label
-      layout_properties: {grid_position: 'EUZUCX,GCOQUB'}
+      layout_properties: {grid_position: 'EUZUCX,GCOQUB', full_width_row: false}
+    - name: name_box
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'EUZUCX,GMKOWK'}
     - name: label_3
       properties: {text: 'Email:'}
       type: Label
       layout_properties: {grid_position: 'BKDWZI,WSHDKV'}
+    - name: email_box
+      properties: {}
+      type: TextBox
+      layout_properties: {grid_position: 'BKDWZI,UMHVSS'}
     - name: label_4
       properties: {text: 'Feedback:'}
       type: Label
       layout_properties: {grid_position: 'WIHRUN,HICQTO'}
+    - name: feedback_box
+      properties: {spacing_below: small}
+      type: TextBox
+      layout_properties: {grid_position: 'IKPXLG,ZZMJJG', full_width_row: false}
+  - name: submit_button
+    properties: {text: submit}
+    type: Button
+    layout_properties: {grid_position: 'MLHTHL,IUZXPU'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
