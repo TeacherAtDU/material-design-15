@@ -7,6 +7,28 @@ components:
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {role: card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'JPJXLE,JMHCFK'}
+    components:
+    - name: label_1
+      properties: {text: Feedback Form, role: headline}
+      type: Label
+      layout_properties: {grid_position: 'WJEYVL,GITVRR'}
+    - name: label_2
+      properties: {text: 'Name:'}
+      type: Label
+      layout_properties: {grid_position: 'EUZUCX,GCOQUB'}
+    - name: label_3
+      properties: {text: 'Email:'}
+      type: Label
+      layout_properties: {grid_position: 'BKDWZI,WSHDKV'}
+    - name: label_4
+      properties: {text: 'Feedback:'}
+      type: Label
+      layout_properties: {grid_position: 'WIHRUN,HICQTO'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
