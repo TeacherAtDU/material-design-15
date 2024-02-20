@@ -45,6 +45,7 @@ components:
     properties: {text: submit}
     type: Button
     layout_properties: {grid_position: 'MLHTHL,IUZXPU'}
+    event_bindings: {click: submit_button_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
