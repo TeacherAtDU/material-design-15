@@ -11,7 +11,7 @@ components:
   - name: card_1
     properties: {role: card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'XXGIOO,SWIMFV'}
+    layout_properties: {grid_position: 'BPUKWQ,DZCHNB'}
     components:
     - name: label_1
       properties: {text: Feedback Form, role: headline}
@@ -38,15 +38,20 @@ components:
       type: Label
       layout_properties: {grid_position: 'WIHRUN,HICQTO'}
     - name: feedback_box
-      properties: {spacing_below: small}
+      properties: {spacing_below: small, visible: true, enabled: true, text: ' '}
       type: TextBox
-      layout_properties: {grid_position: 'IKPXLG,ZZMJJG', full_width_row: false}
+      layout_properties: {grid_position: 'GAYRXI,MKTDRR', row_background: 'theme:Gray
+          50'}
+      data_bindings: []
+      event_bindings: {pressed_enter: feedback_box_pressed_enter}
   - name: submit_button
-    properties: {text: submit}
+    properties: {text: submit, role: raised, background: 'theme:Gray 100', foreground: 'theme:Gray
+        600'}
     type: Button
-    layout_properties: {grid_position: 'MLHTHL,IUZXPU'}
+    layout_properties: {grid_position: 'RHCDVJ,ZCSYQF'}
     event_bindings: {click: submit_button_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+custom_component: true
