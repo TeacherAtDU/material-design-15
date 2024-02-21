@@ -1,3 +1,4 @@
+import anvil.email
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -13,6 +14,17 @@ def add_feedback(name, email, feedback):
     feedback=feedback, 
     created=datetime.now()
   )
+  # Send yourself an email each time feedback is submitted
+  anvil.email.send(#to="noreply@anvil.works", # Change this to your email address!
+                   subject=f"Feedback from {name}",
+                   text=f"""
+  A new person has filled out the feedback form!
+
+  Name: {name}
+  Email address: {email}
+  Feedback:
+  {feedback}
+  """)
 
 # This is a server module. It runs on the Anvil server,
 # rather than in the user's browser.
